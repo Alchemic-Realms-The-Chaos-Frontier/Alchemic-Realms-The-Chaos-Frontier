@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "alchemic_realms_the_chaos_fronfier",
+  "version": "${version}",
+  "name": "Alchemic-Realms-The-Chaos-Frontier-Fabric",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/alchemic_realms_the_chaos_fronfier/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.system.alchemic_realms_the_chaos_fronfier.client.Alchemic_realms_the_chaos_fronfierClient"
+    ],
+    "main": [
+      "org.system.alchemic_realms_the_chaos_fronfier.Alchemic_realms_the_chaos_fronfier"
+    ]
+  },
+  "mixins": [
+    "alchemic_realms_the_chaos_fronfier.mixins.json",
+    {
+      "config": "alchemic_realms_the_chaos_fronfier.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
